@@ -1,6 +1,7 @@
 import express from "express";
 import morgan from "morgan";
 import cors from "cors";
+import "dotenv/config.js";
 
 //Rutas
 import authRoutes from "./routes/auth.routes.js";
@@ -18,7 +19,6 @@ const app = express();
 app.use(express.json());
 //Función de middlewar para poder leer cookies
 app.use(cookieParser());
-
 //Usando libreria para ver el estado de cada solicitud al servidor
 app.use(morgan("dev"));
 //Para admitir el acceso del cliente a la API

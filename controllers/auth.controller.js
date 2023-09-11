@@ -86,6 +86,8 @@ export const login = async (req, res) => {
         id: userFound._id,
         names: userFound.names,
         patlastname: userFound.patlastname,
+        matlastname: userFound.patlastname,
+        email: userFound.patlastname,
         image: userFound.image,
         role: userFound.role,
       },
@@ -144,9 +146,9 @@ export const verifyTokenClient = (req, res) => {
     //Responder con un token dentro de una cookie
     res.cookie("token", newToken, {
       //withCredentials: true,
-      httpOnly: false,
-      //sameSite: "none",
-      secure: false,
+      httpOnly: true,
+      sameSite: "none",
+      secure: true,
     });
 
     //Responder un objeto JSON con datos del usuario logeado para manejar su sesion
@@ -157,6 +159,8 @@ export const verifyTokenClient = (req, res) => {
         id: userFound._id,
         names: userFound.names,
         patlastname: userFound.patlastname,
+        matlastname: userFound.patlastname,
+        email: userFound.patlastname,
         image: userFound.image,
         role: userFound.role,
       },

@@ -29,9 +29,10 @@ app.use(
   })
 );
 
+/*
 app.get("/", (req, res) => {
-  res.send(`Pagiand e inicio, puerto, ${process.env.SERVER_PORT}`);
-});
+  res.send(`Pagiane inicio, puerto, ${process.env.SERVER_PORT}`);
+});*/
 
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);

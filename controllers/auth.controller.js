@@ -74,8 +74,8 @@ export const login = async (req, res) => {
     res.cookie("token", token, {
       //withCredentials: true,
       httpOnly: true,
-      //sameSite: "none",
-      secure: false,
+      sameSite: "none",
+      secure: true,
     });
 
     //Responder un objeto JSON con datos del usuario logeado para manejar su sesion

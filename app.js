@@ -24,7 +24,7 @@ app.use(morgan("dev"));
 //Para admitir el acceso del cliente a la API
 app.use(
   cors({
-    origin: "*",
+    origin: "https://task-app-mern.vercel.app",
     credentials: true,
   })
 );

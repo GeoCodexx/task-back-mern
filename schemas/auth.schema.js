@@ -1,4 +1,4 @@
-import { z } from "zod"; //Libreria zod para validaciones de datos
+import { z } from "zod/lib/index.js"; //Libreria zod para validaciones de datos
 
 export const registerSchema = z.object({
   names: z

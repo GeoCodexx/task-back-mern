@@ -1,5 +1,5 @@
-import { z } from "zod";
-
+//import { z } from "zod";
+const z = require("zod");
 export const createPermissionSchema = z.object({
   name: z
     .string({

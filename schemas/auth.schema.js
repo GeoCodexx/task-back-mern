@@ -1,5 +1,4 @@
-const z = require("zod");
-//import { z } from "zod"; //Libreria zod para validaciones de datos
+import { z } from "zod"; //Libreria zod para validaciones de datos
 
 export const registerSchema = z.object({
   names: z
@@ -36,7 +35,7 @@ export const registerSchema = z.object({
     .min(5, { message: "Password must be 5 or more characters long" }),
 
   image: z.string().url({ message: "Invalid url image" }).optional(),
-  role: z.string({ required_error: "Role is required" }).optional(),
+  role: z.string({required_error: "Role is required",}).optional(),
 });
 
 export const loginSchema = z.object({
